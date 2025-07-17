@@ -22,7 +22,7 @@ function App() {
             <h2>Screenshots</h2>
             <div className="screenshot-container">
               <img 
-                src="/screenshot.jpg" 
+                src="/screenshot1.jpg" 
                 alt="Jerry Player Interface" 
                 className="screenshot"
               />
@@ -40,7 +40,7 @@ function App() {
                 <li>Or Download and Extract the <code>JerryPlayer.zip</code> file.</li>
                 <li>Create a <code>Music</code> folder next to the application (folder must be named "Music")</li>
                 <li>Organize your MP3 files in subfolders by artist and year (see below).</li>
-                <li>Launch Jerry Player and start enjoying your music collection</li>
+                <li>Launch Jerry Player and start enjoying your music collection.</li>
                 <li><strong>Note: </strong>You might get a warning from Windows that it is an unrecognized app, because it's an .exe file. Just click "More Info" and "Run Anyway".</li>
               </ul>
 
