@@ -92,3 +92,7 @@ jspm_packages/
 
 # DynamoDB Local files
 .dynamodb/
+
+DONOTSHARE.md
+**/JerryPlayer.exe
+**/JerryPlayer.zip
