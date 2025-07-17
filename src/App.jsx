@@ -44,13 +44,13 @@ function App() {
                 <li>Download <code>JerryPlayer.exe</code> - no installation required!</li>
                 <li>Or Download and Extract the <code>JerryPlayer.zip</code> file.</li>
                 <li>Create a <code>Music</code> folder next to the application (folder must be named "Music")</li>
-                <li>Organize your MP3 files in subfolders by artist and year (see below).</li>
+                <li>Organize your MP3 or FLAC files in subfolders by artist and year (see below).</li>
                 <li>Launch Jerry Player and start enjoying your music collection.</li>
                 <li><strong>Note: </strong>You might get a warning from Windows that it is an unrecognized app, because it's an .exe file. Just click "More Info" and "Run Anyway".</li>
               </ul>
 
               <h3>📂 Organizing Your Music</h3>
-              <p>For the best experience, organize your music, and name your mp3 files like this:</p>
+              <p>For the best experience, organize your music, and name your mp3 or FLAC files like this:</p>
               <pre><code>{`Music/
 ├── Grateful Dead/
 │   ├── 1977/
@@ -84,7 +84,7 @@ function App() {
               <h3>🔧 Troubleshooting</h3>
               <ul>
                 <li><strong>"FOLDER NOT FOUND":</strong> Create a Music folder or use the ⭐ button to select a different folder</li>
-                <li><strong>"NO MP3 FILES FOUND":</strong> Make sure your music files are in MP3 format</li>
+                <li><strong>"NO AUDIO FILES FOUND":</strong> Make sure your music files are in MP3 or FLAC format</li>
                 <li><strong>Won't start:</strong> Ensure you have Windows 10+ with .NET 8 support</li>
               </ul>
             </div>

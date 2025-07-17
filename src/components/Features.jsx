@@ -24,7 +24,7 @@ const Features = () => {
     {
       icon: '📁',
       title: 'Folder Organization',
-      description: 'You must organize your MP3 collection by artist and year (See Quick Start guide below). Perfect for live music collections and concert recordings.'
+      description: 'You must organize your mp3 or FLAC collection by artist and year (See Quick Start guide below). Perfect for live music collections and concert recordings.'
     },
     {
       icon: '🎲',
@@ -38,8 +38,8 @@ const Features = () => {
     },
     {
       icon: '💿',
-      title: 'MP3 Support for Any Band',
-      description: 'Built specifically for any MP3 files. Any artist or band will work. I just happen to really like the Grateful Dead. 🐻'
+      title: 'MP3 and FLAC Support for Any Band',
+      description: 'Built specifically for any MP3 or FLAC files. Any artist or band will work. I just happen to really like the Grateful Dead. 🐻'
     }
   ]
 

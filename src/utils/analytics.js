@@ -3,7 +3,7 @@
 // Track page views
 export const trackPageView = (url) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', 'GA_MEASUREMENT_ID', {
+    window.gtag('config', 'G-X5M6REWCFV', {
       page_path: url,
     });
   }
@@ -22,14 +22,29 @@ export const trackEvent = (action, category, label, value) => {
 
 // Track download events specifically for your Jerry Player downloads
 export const trackDownload = (fileName, downloadType = 'exe') => {
-  trackEvent('download', 'JerryPlayer', fileName, 1);
-  
-  // Also track as a conversion if you set up goals in GA
+  // Track the download event (this will automatically be a conversion if set up in GA4)
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'conversion', {
-      send_to: 'GA_MEASUREMENT_ID/CONVERSION_ID', // Replace with your conversion ID
-      event_category: 'download',
+    window.gtag('event', 'download', {
+      event_category: 'JerryPlayer',
       event_label: fileName,
+      file_name: fileName,
+      file_type: downloadType,
+      value: 1
+    });
+    
+    // Also send a purchase/conversion event for better tracking
+    window.gtag('event', 'purchase', {
+      transaction_id: `download_${Date.now()}`,
+      value: 0, // Free download
+      currency: 'USD',
+      items: [{
+        item_id: 'jerryplayer',
+        item_name: 'Jerry Player',
+        item_category: 'Software',
+        item_variant: downloadType,
+        quantity: 1,
+        price: 0
+      }]
     });
   }
 };
