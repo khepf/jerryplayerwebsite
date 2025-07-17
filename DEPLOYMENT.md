@@ -25,6 +25,31 @@ This guide will help you deploy the Jerry Player website to various hosting plat
    npm run build
    ```
 
+## Download Functionality
+
+The website now supports two download options:
+- **JerryPlayer.exe** - Direct executable file
+- **JerryPlayer.zip** - ZIP archive containing the executable and additional files
+
+### Setting Up Downloads
+
+1. **Prepare your release files:**
+   - Build your JerryPlayer.exe from the main project
+   - Use the `update-release.bat` script to organize files:
+     ```cmd
+     update-release.bat v1.0.2
+     ```
+
+2. **Upload to web server:**
+   - Upload the `releases/` folder to your web server
+   - Upload the `download.php` script to your web root
+   - Ensure PHP is enabled on your server
+
+3. **Test downloads:**
+   - Visit your website and test both download buttons
+   - Check that the `downloads.log` file is being created
+   - Verify both .exe and .zip files download correctly
+
 ## Deployment Options
 
 ### 1. Static Hosting (Recommended)

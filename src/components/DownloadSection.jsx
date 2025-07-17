@@ -8,23 +8,36 @@ const DownloadSection = () => {
     { label: 'Requirements', value: '.NET 8' }
   ]
 
-  const handleDownload = () => {
-    // For a real implementation, this would point to your server
-    // Examples:
-    // window.location.href = '/download.php?file=JerryPlayer.exe&version=latest';
-    // window.location.href = '/releases/latest/JerryPlayer.exe';
-    
-    // For now, show an informational message
-    alert('Download functionality:\n\nIn a production environment, this would:\n1. Download JerryPlayer.exe from your server\n2. Log the download for analytics\n3. Serve the latest version automatically\n\nTo implement:\n- Host the exe file on your server\n- Update this function to point to the file URL\n- Consider using the included download.php script');
+  const handleDownloadExe = () => {
+    // Download the exe file using the download.php script
+    window.location.href = '/download.php?file=JerryPlayer.exe&version=latest';
+  }
+
+  const handleDownloadZip = () => {
+    // Download the zip file using the download.php script
+    window.location.href = '/download.php?file=JerryPlayer.zip&version=latest';
   }
 
   return (
     <section className="download" id="download">
       <h2>Download Jerry Player</h2>
       <p>Get the latest version of Jerry Player for Windows</p>
-      <button onClick={handleDownload} className="cta-button">
-        Download JerryPlayer.exe
-      </button>
+      
+      <div className="download-buttons">
+        <div className="download-option">
+          <button onClick={handleDownloadExe} className="cta-button">
+            Download JerryPlayer.exe
+          </button>
+          <p className="download-description">Direct executable file</p>
+        </div>
+        <div className="download-option">
+          <button onClick={handleDownloadZip} className="cta-button secondary">
+            Download JerryPlayer.zip
+          </button>
+          <p className="download-description">ZIP archive with additional files</p>
+        </div>
+      </div>
+      
       <div className="download-info">
         {downloadInfo.map((info, index) => (
           <div key={index} className="download-detail">

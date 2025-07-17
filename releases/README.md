@@ -14,10 +14,12 @@ This folder will contain the releases of Jerry Player that can be downloaded fro
 releases/
 ├── v1.0.1/
 │   ├── JerryPlayer.exe
+│   ├── JerryPlayer.zip
 │   ├── README.txt
 │   └── changelog.txt
 └── latest/
     ├── JerryPlayer.exe (symlink or copy of latest version)
+    ├── JerryPlayer.zip (symlink or copy of latest version)
     └── version.txt
 ```
 
@@ -25,8 +27,9 @@ releases/
 
 1. Create a new folder with the version number (e.g., `v1.0.2`)
 2. Copy the built executable to the version folder
-3. Update the `latest` folder with the new version
-4. Update the website's download section to point to the new version
+3. Create a zip file containing the executable and any additional files
+4. Update the `latest` folder with the new version (both .exe and .zip)
+5. Update the website's download section to point to the new version
 
 ## Serving files:
 
