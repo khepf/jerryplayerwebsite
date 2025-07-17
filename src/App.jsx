@@ -36,14 +36,16 @@ function App() {
             <div className="guide-content">
               <h3>🚀 Getting Started</h3>
               <ul>
-                <li>Download and run <code>JerryPlayer.exe</code> - no installation required!</li>
-                <li>Create a <code>Music</code> folder next to the application</li>
-                <li>Organize your MP3 files in subfolders by artist and year</li>
+                <li>Download <code>JerryPlayer.exe</code> - no installation required!</li>
+                <li>Or Download and Extract the <code>JerryPlayer.zip</code> file.</li>
+                <li>Create a <code>Music</code> folder next to the application (folder must be named "Music")</li>
+                <li>Organize your MP3 files in subfolders by artist and year (see below).</li>
                 <li>Launch Jerry Player and start enjoying your music collection</li>
+                <li><strong>Note: </strong>You might get a warning from Windows that it is an unrecognized app, because it's an .exe file. Just click "More Info" and "Run Anyway".</li>
               </ul>
 
               <h3>📂 Organizing Your Music</h3>
-              <p>For the best experience, organize your music like this:</p>
+              <p>For the best experience, organize your music, and name your mp3 files like this:</p>
               <pre><code>{`Music/
 ├── Grateful Dead/
 │   ├── 1977/
