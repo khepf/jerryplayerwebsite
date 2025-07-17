@@ -370,3 +370,10 @@ html {
   background: #d4af37;
   color: #2c1810;
 }
+
+.features,
+.screenshots,
+.download,
+.user-guide {
+  scroll-margin-top: 40px; /* 80px header + 20px breathing room */
+}
