@@ -23,8 +23,8 @@ const Features = () => {
     },
     {
       icon: '📁',
-      title: 'Smart Organization',
-      description: 'Automatically organizes your MP3 collection by artist and year. Perfect for live music collections and concert recordings.'
+      title: 'Folder Organization',
+      description: 'You must organize your MP3 collection by artist and year (See Quick Start guide below). Perfect for live music collections and concert recordings.'
     },
     {
       icon: '🎲',
@@ -38,8 +38,8 @@ const Features = () => {
     },
     {
       icon: '💿',
-      title: 'MP3 Support',
-      description: 'Built specifically for MP3 files with high-quality audio playback using the NAudio library.'
+      title: 'MP3 Support for Any Band',
+      description: 'Built specifically for any MP3 files. Any artist or band will work. I just happen to really like the Grateful Dead. 🐻'
     }
   ]
 

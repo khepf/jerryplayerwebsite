@@ -375,5 +375,5 @@ html {
 .screenshots,
 .download,
 .user-guide {
-  scroll-margin-top: 40px; /* 80px header + 20px breathing room */
+  scroll-margin-top: 40px;
 }

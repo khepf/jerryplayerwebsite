@@ -27,9 +27,6 @@ function App() {
                 className="screenshot"
               />
             </div>
-            <p style={{ marginTop: '1rem', opacity: '0.8' }}>
-              The vintage-inspired interface with cassette tape design
-            </p>
           </section>
 
           <DownloadSection />
