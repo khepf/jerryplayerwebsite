@@ -90,7 +90,7 @@ function App() {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 Jerry Player - A retro music experience for the modern age</p>
+          <p>&copy; {new Date().getFullYear()} Jerry Player - A retro music experience for the modern age</p>
         </div>
       </footer>
     </div>

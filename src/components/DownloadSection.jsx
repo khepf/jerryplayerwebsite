@@ -3,9 +3,9 @@ import React from 'react'
 const DownloadSection = () => {
   const downloadInfo = [
     { label: 'Version', value: '1.0.1' },
-    { label: 'Size', value: '~15 MB' },
+    { label: '.exe File Size', value: '~156 MB' },
+    { label: '.zip File Size', value: '~66 MB' },
     { label: 'Platform', value: 'Windows 10+' },
-    { label: 'Requirements', value: '.NET 8' }
   ]
 
   const handleDownloadExe = () => {
@@ -34,7 +34,7 @@ const DownloadSection = () => {
           <button onClick={handleDownloadZip} className="cta-button secondary">
             Download JerryPlayer.zip
           </button>
-          <p className="download-description">ZIP archive with additional files</p>
+          <p className="download-description">ZIP file containing .exe file</p>
         </div>
       </div>
       
