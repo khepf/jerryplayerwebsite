@@ -1,4 +1,5 @@
 import React from 'react'
+import { trackDownload } from '../utils/analytics'
 
 const DownloadSection = () => {
   const downloadInfo = [
@@ -9,11 +10,17 @@ const DownloadSection = () => {
   ]
 
   const handleDownloadExe = () => {
+    // Track the download event
+    trackDownload('JerryPlayer.exe', 'exe');
+    
     // Download the exe file using the download.php script
     window.location.href = '/download.php?file=JerryPlayer.exe&version=latest';
   }
 
   const handleDownloadZip = () => {
+    // Track the download event
+    trackDownload('JerryPlayer.zip', 'zip');
+    
     // Download the zip file using the download.php script
     window.location.href = '/download.php?file=JerryPlayer.zip&version=latest';
   }

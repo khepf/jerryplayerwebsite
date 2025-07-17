@@ -8,7 +8,13 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": ["music", "player", "vintage", "cassette", "mp3"],
+  "keywords": [
+    "music",
+    "player",
+    "vintage",
+    "cassette",
+    "mp3"
+  ],
   "author": "",
   "license": "ISC",
   "type": "module",
@@ -16,6 +22,7 @@
     "@vitejs/plugin-react": "^4.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-ga4": "^2.1.0",
     "vite": "^7.0.4"
   }
 }

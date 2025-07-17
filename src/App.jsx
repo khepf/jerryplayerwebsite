@@ -2,8 +2,13 @@ import React from 'react'
 import Header from './components/Header'
 import Features from './components/Features'
 import DownloadSection from './components/DownloadSection'
+import { trackButtonClick } from './utils/analytics'
 
 function App() {
+  const handleCTAClick = () => {
+    trackButtonClick('download_now', 'hero');
+  };
+
   return (
     <div className="App">
       <Header />
@@ -13,7 +18,7 @@ function App() {
           <section className="hero">
             <h1>Jerry Player</h1>
             <p>A vintage-style music player with a unique cassette tape interface</p>
-            <a href="#download" className="cta-button">Download Now</a>
+            <a href="#download" className="cta-button" onClick={handleCTAClick}>Download Now</a>
           </section>
 
           <Features />
