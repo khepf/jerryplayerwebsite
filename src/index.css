@@ -114,6 +114,47 @@ button.cta-button:hover {
   color: #2c1810;
 }
 
+/* Demo Section */
+.demo {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.demo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #d4af37;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding-bottom: 45%; /* 16:9 aspect ratio (9/16 = 0.5625 but adjusted for better mobile view) */
+  height: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.demo-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.demo-description {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: #f0e6d2;
+}
+
 /* Features Section */
 .features {
   padding: 4rem 0;
@@ -358,6 +399,14 @@ button.cta-button:hover {
   .features-grid {
     grid-template-columns: 1fr;
   }
+  
+  .video-container {
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for mobile */
+  }
+  
+  .demo h2 {
+    font-size: 2rem;
+  }
 }
 
 /* Scroll behavior */
@@ -372,6 +421,7 @@ html {
 }
 
 .features,
+.demo,
 .screenshots,
 .download,
 .user-guide {

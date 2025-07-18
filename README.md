@@ -7,6 +7,7 @@ This is the official website for Jerry Player, a vintage-style music player with
 - **React + Vite**: Fast development and modern tooling
 - **Vanilla CSS**: Clean, responsive design without external CSS frameworks
 - **Vintage Theme**: Retro-styled design matching the Jerry Player aesthetic
+- **Demo Video**: Embedded YouTube video showcasing Jerry Player in action
 - **User Guide**: Comprehensive documentation for the music player
 - **Download Section**: Central place to download the latest version
 

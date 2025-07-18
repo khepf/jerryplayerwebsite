@@ -3,7 +3,7 @@ import { trackDownload } from '../utils/analytics'
 
 const DownloadSection = () => {
   const downloadInfo = [
-    { label: 'Version', value: '1.0.1' },
+    { label: 'Version', value: '1.1.1' },
     { label: '.exe File Size', value: '~156 MB' },
     { label: '.zip File Size', value: '~66 MB' },
     { label: 'Platform', value: 'Windows 10+' },

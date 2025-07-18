@@ -18,7 +18,25 @@ function App() {
           <section className="hero">
             <h1>Jerry Player</h1>
             <p>A vintage-style music player with a unique cassette tape interface</p>
+            <p>No internet required. No installation required.</p>
             <a href="#download" className="cta-button" onClick={handleCTAClick}>Download Now</a>
+          </section>
+
+          <section className="demo" id="demo">
+            <h2>See Jerry Player in Action</h2>
+            <div className="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/hBdS03ix5yA"
+                title="Jerry Player Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="demo-video"
+              ></iframe>
+            </div>
+            <p className="demo-description">
+              Watch this quick demo to see how Jerry Player brings a vintage cassette tape experience to your digital music collection.
+            </p>
           </section>
 
           <Features />
@@ -50,18 +68,40 @@ function App() {
               </ul>
 
               <h3>📂 Organizing Your Music</h3>
-              <p>For the best experience, organize your music, and name your mp3 or FLAC files like this:</p>
+              <p>For the best experience, organize your music using one of these folder structures:</p>
+              <p><strong>Option A - Direct Files (3-level):</strong></p>
               <pre><code>{`Music/
-├── Grateful Dead/
-│   ├── 1977/
-│   │   └── Cornell 5-8-77.mp3
-│   └── 1978/
-│       └── Red Rocks 7-8-78.mp3
-└── Jerry Garcia Band/
-    ├── 1990/
-    │   └── Broadway 11-16-90.mp3
-    └── 1991/
-        └── Warfield 2-4-91.mp3`}</code></pre>
+├── Example Band 1
+│   ├── 1975
+│   │   └── Red Rocks, Colorado.mp3
+│   └── 1976
+│       └── The Slippery Biscuit, Dayton Ohio.flac
+└── Example Band 2
+    ├── 1980
+    │   └── Jackson Stadium, Chicago Illinois.mp3
+    └── 1985
+        └── Ed's Coffee Emporium, Toronto Canada.mp3`}</code></pre>
+              
+              <p><strong>Option B - Show Folders (4-level):</strong></p>
+              <pre><code>{`Music/
+├── Example Band 1
+│   ├── 1975
+│   │   └── Red Rocks, Colorado
+│   │       ├── 01 - Opening Song.mp3
+│   │       ├── 02 - Second Song.mp3
+│   │       └── 03 - Encore.mp3
+│   └── 1976
+│       └── The Slippery Biscuit, Dayton Ohio
+│           ├── Track 1.flac
+│           └── Track 2.flac
+└── Example Band 2
+    ├── 1980
+    │   └── Jackson Stadium, Chicago Illinois
+    │       ├── Song A.mp3
+    │       └── Song B.mp3
+    └── 1985
+        └── Ed's Coffee Emporium, Toronto Canada
+            └── Full Show.mp3`}</code></pre>
 
               <h3>🎮 Using the Controls</h3>
               <ul>
