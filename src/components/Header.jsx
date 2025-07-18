@@ -12,6 +12,7 @@ const Header = () => {
             <a href="#screenshots">Screenshots</a>
             <a href="#download">Download</a>
             <a href="#guide">User Guide</a>
+            <a href="#donate">Donate</a>
           </nav>
         </div>
       </div>
