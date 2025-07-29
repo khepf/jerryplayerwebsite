@@ -14,14 +14,22 @@ const Header = () => {
   // Handle body scroll locking when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
+      // Get scrollbar width before hiding it
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      
+      // Apply styles to prevent shift
       document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
     } else {
+      // Restore normal scrolling
       document.body.style.overflow = 'unset';
+      document.body.style.paddingRight = '0px';
     }
 
     // Cleanup function to restore scroll on unmount
     return () => {
       document.body.style.overflow = 'unset';
+      document.body.style.paddingRight = '0px';
     };
   }, [isMobileMenuOpen]);
 
@@ -61,9 +69,7 @@ const Header = () => {
               onClick={toggleMobileMenu}
               aria-label="Toggle navigation menu"
             >
-              <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
-              <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
-              <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+              {isMobileMenuOpen ? '✕' : '☰'}
             </button>
 
             {/* Navigation */}
