@@ -27,20 +27,23 @@ if not exist "%VERSION_DIR%" (
 )
 
 :: Copy files to version directory
-echo Copying JerryPlayer.exe to %VERSION_DIR%
-if exist "JerryPlayer.exe" (
-    copy "JerryPlayer.exe" "%VERSION_DIR%\"
+echo Copying JerryPlayer files to %VERSION_DIR%
+if exist "JerryPlayer.zip" (
+    copy "JerryPlayer.zip" "%VERSION_DIR%\"
 ) else (
-    echo WARNING: JerryPlayer.exe not found in current directory
+    echo WARNING: JerryPlayer.zip not found in current directory
 )
 
-:: Create zip file
-echo Creating JerryPlayer.zip
-if exist "JerryPlayer.exe" (
-    powershell -command "Compress-Archive -Path 'JerryPlayer.exe' -DestinationPath '%VERSION_DIR%\JerryPlayer.zip' -Force"
-    echo JerryPlayer.zip created successfully
+if exist "Music-Band-Year-Show.zip" (
+    copy "Music-Band-Year-Show.zip" "%VERSION_DIR%\"
 ) else (
-    echo WARNING: Cannot create zip file - JerryPlayer.exe not found
+    echo WARNING: Music-Band-Year-Show.zip not found in current directory
+)
+
+if exist "Music-Band-Year-Show-Song.zip" (
+    copy "Music-Band-Year-Show-Song.zip" "%VERSION_DIR%\"
+) else (
+    echo WARNING: Music-Band-Year-Show-Song.zip not found in current directory
 )
 
 :: Create changelog if it doesn't exist
@@ -61,9 +64,10 @@ if not exist "%VERSION_DIR%\README.txt" (
     echo A vintage-style music player for Windows >> "%VERSION_DIR%\README.txt"
     echo. >> "%VERSION_DIR%\README.txt"
     echo Installation: >> "%VERSION_DIR%\README.txt"
-    echo 1. Extract JerryPlayer.exe from the zip file >> "%VERSION_DIR%\README.txt"
-    echo 2. Run JerryPlayer.exe >> "%VERSION_DIR%\README.txt"
+    echo 1. Extract JerryPlayer.zip >> "%VERSION_DIR%\README.txt"
+    echo 2. Run JerryPlayer.exe from the extracted folder >> "%VERSION_DIR%\README.txt"
     echo 3. Create a Music folder or select your music library >> "%VERSION_DIR%\README.txt"
+    echo 4. Or download sample libraries and extract them >> "%VERSION_DIR%\README.txt"
     echo. >> "%VERSION_DIR%\README.txt"
     echo For more information, visit: [your website URL] >> "%VERSION_DIR%\README.txt"
 )
@@ -72,14 +76,19 @@ if not exist "%VERSION_DIR%\README.txt" (
 echo Updating latest directory
 if not exist "%LATEST_DIR%" mkdir "%LATEST_DIR%"
 
-if exist "%VERSION_DIR%\JerryPlayer.exe" (
-    copy "%VERSION_DIR%\JerryPlayer.exe" "%LATEST_DIR%\"
-    echo JerryPlayer.exe copied to latest directory
-)
-
 if exist "%VERSION_DIR%\JerryPlayer.zip" (
     copy "%VERSION_DIR%\JerryPlayer.zip" "%LATEST_DIR%\"
     echo JerryPlayer.zip copied to latest directory
+)
+
+if exist "%VERSION_DIR%\Music-Band-Year-Show.zip" (
+    copy "%VERSION_DIR%\Music-Band-Year-Show.zip" "%LATEST_DIR%\"
+    echo Music-Band-Year-Show.zip copied to latest directory
+)
+
+if exist "%VERSION_DIR%\Music-Band-Year-Show-Song.zip" (
+    copy "%VERSION_DIR%\Music-Band-Year-Show-Song.zip" "%LATEST_DIR%\"
+    echo Music-Band-Year-Show-Song.zip copied to latest directory
 )
 
 :: Update version.txt

@@ -6,7 +6,7 @@
 
 // Configuration
 $releasesDir = __DIR__ . '/releases';
-$allowedFiles = ['JerryPlayer.exe', 'JerryPlayer.zip', 'readme.txt', 'changelog.txt'];
+$allowedFiles = ['JerryPlayer.zip', 'Music-Band-Year-Show.zip', 'Music-Band-Year-Show-Song.zip', 'readme.txt', 'changelog.txt'];
 
 // Get requested file
 $file = isset($_GET['file']) ? $_GET['file'] : '';

@@ -7,16 +7,25 @@ const UserGuideSection = () => {
       <div className="guide-content">
         <h3>🚀 Getting Started</h3>
         <ul>
-          <li>Download <code>JerryPlayer.exe</code> - no installation required!</li>
-          <li>Or Download and Extract the <code>JerryPlayer.zip</code> file.</li>
+          <li>Download and extract the <code>JerryPlayer.zip</code> file</li>
+          <li>Run <code>JerryPlayer.exe</code> from the extracted folder</li>
           <li>Create a <code>Music</code> folder next to the application (folder must be named "Music")</li>
           <li>Organize your MP3 or FLAC files in subfolders by artist and year (see below).</li>
+          <li>Or download one of the sample music libraries to get started quickly</li>
           <li>Launch Jerry Player and start enjoying your music collection.</li>
-          <li><strong>Note: </strong>You might get a warning from Windows that it is an unrecognized app, because it's an .exe file. Just click "More Info" and "Run Anyway".</li>
+          <li><strong>Note: </strong>You might get a warning from Windows that it is an unrecognized app. Just click "More Info" and "Run Anyway".</li>
         </ul>
 
         <h3>📂 Organizing Your Music</h3>
         <p>For the best experience, organize your music using one of these folder structures:</p>
+        
+        <h4>📦 Sample Music Libraries</h4>
+        <p>Download our sample libraries to get started instantly:</p>
+        <ul>
+          <li><strong>Show Library:</strong> Example shows organized in the 4-level structure (Band/Year/Show/Songs)</li>
+          <li><strong>Song Library:</strong> Example shows organized in the 3-level structure (Band/Year/Show.mp3)</li>
+        </ul>
+        <p>Simply extract either sample library and use the ⭐ button in Jerry Player to point to the extracted Music folder.</p>
         <p><strong>Option A - Direct Files (3-level):</strong></p>
         <pre><code>{`Music/
 ├── Example Band 1
